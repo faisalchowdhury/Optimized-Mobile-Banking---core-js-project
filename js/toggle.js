@@ -1,5 +1,6 @@
 
-document.getElementById('cashout').style.display = "none";
+toggleRemove('cashout-box','cashout');
+toggleAdd('add-money-box','addmoney' );
 
 document.getElementById('add-money-box').addEventListener('click' , function(){
     
