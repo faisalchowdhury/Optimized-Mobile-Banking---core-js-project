@@ -88,10 +88,10 @@
           </div>
         </div>
 
-        <div class="w-[120px] h-[120px] p-3 shadow-md text-center flex flex-col justify-center rounded-lg border-purple-600 border-2 hover:bg-white cursor-pointer">
-          <p class="font-semibold">Add money</p>
+        <div id="transaction-box" class="w-[120px] h-[120px] p-3 shadow-md text-center flex flex-col justify-center rounded-lg border-purple-600 border-2 hover:bg-white cursor-pointer">
+          <p class="font-semibold">Transaction History</p>
           <div class="text-purple-500 text-2xl">
-            <i class="fa-solid fa-wallet"></i>
+            <i class="fa-solid fa-tent-arrow-left-right"></i>
           </div>
         </div>
 
@@ -120,7 +120,7 @@
               <label class="label">
                 <span class="label-text">Select Bank</span>
               </label>
-              <select class="select select-bordered w-full max-w-xs">
+              <select id="from-bank" class="select select-bordered w-full max-w-xs">
                 <option disabled selected>Choose one</option>
                 <option value="bkash">Bkash</option>
                 <option value="nagad">Nagod</option>
@@ -187,7 +187,19 @@
      </section>
     <!-- Add money area -->
 
+   <!-- Transaction area -->
 
+   <section id="transaction">
+    <h2 class="text-xl font-bold text-green-700 bg-white p-5 rounded-xl m-4 text-center">
+      Transaction 
+    </h2>
+    <div id="tran-wrapper" class="mx-auto">
+       
+
+    <div>   
+
+    </section>
+   <!-- Transaction area -->
 
 
   </div>

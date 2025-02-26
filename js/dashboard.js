@@ -6,6 +6,7 @@ document.getElementById('add-money-btn').addEventListener('click',function(e){
     const pinNumber = getValueById('add-money-pin-number');
     const amount = makeInputValueFloat('add-money-amount');
     const mainBalance =makeTextValueFloat('main-balance');
+    const bank = document.getElementById('from-bank').value;
 
     if(accountNumber.length === 12){
  
@@ -17,6 +18,22 @@ document.getElementById('add-money-btn').addEventListener('click',function(e){
             newBalance = mainBalance + amount;
         
             setBalance(newBalance)
+
+              // Transaction History
+
+              const wrapper =document.getElementById('tran-wrapper');
+
+
+              const div = document.createElement('div');
+              div.classList.add('bg-green-800' ,'font-bold', 'text-gray-100', 'm-4' , 'p-4', 'rounded-xl')
+
+              div.innerHTML = `
+              <p class="">You received ${amount} TK on ${accountNumber} from ${bank}  </p>
+              `;
+
+              
+              wrapper.appendChild(div);
+
 
          }else {
            alert('invalid amount')
@@ -51,6 +68,19 @@ document.getElementById('cashout-btn').addEventListener('click' ,function(event)
 
                 setBalance(newBalance);
 
+              // Transaction History
+
+              const wrapper =document.getElementById('tran-wrapper');
+
+              const div = document.createElement('div');
+              
+
+              div.innerHTML = `
+              <p class="bg-red-600 font-bold text-gray-100 m-4 p-4 rounded-xl">Cashout ${amount} TK from ${accountNumber}  </p>
+              `;
+
+              
+              wrapper.appendChild(div);
 
             }else{
                 alert('insufficient balance')
@@ -62,3 +92,7 @@ document.getElementById('cashout-btn').addEventListener('click' ,function(event)
         alert('invalid account number')
     }
 });
+
+
+
+
