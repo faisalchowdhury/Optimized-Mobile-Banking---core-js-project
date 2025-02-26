@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='light'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+</head>
+
+<body>
+
+  
+
+  <main class="bg-gray-300 ">
+    <div class="main-wrapper max-w-md mx-auto bg-gray-200 p-4 ">
+
+
+    <!-- Header Area -->
+    <section class="header-section">
+      <div class="flex items-center gap-3 my-10 justify-evenly">
+        <div class="logo">
+          <img class="w-[100px] mx-auto" src="assets/logo.png" alt="">
+        </div>
+
+        <div>
+          <h2 class="font-bold text-2xl">$ <span id="main-balance">4500</span></h2>
+          <p class="bg-yellow-500 font-medium p-1 rounded-lg text-sm">Available Balance</p>
+        </div>
+        <div>
+          <button class="btn bg-purple-900 text-white hover:bg-black"><i class="fa-solid fa-right-from-bracket"></i>
+            Logout</button>
+        </div>
+      </div>
+
+
+      <div class="m-1 p-5 bg-white rounded-lg shadow-md">
+        <h1 class="text-xl font-semibold">Welcome to <span class="text-purple-600">Bugnician</span> mobile Banking!</h1>
+        <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+      </div>
+    </section>
+    <!-- Header Area -->
+
+    <!-- Action Area -->
+    <section class="action-area mx-1 my-5">
+      
+      <div class="action-wrapper grid grid-cols-3 place-items-center gap-4">
+
+        <div id="add-money-box" class="w-[120px] h-[120px] p-3 shadow-md text-center flex flex-col justify-center rounded-lg border-purple-600 border-2 hover:bg-white cursor-pointer">
+          <p class="font-semibold">Add money</p>
+          <div class="text-purple-500 text-2xl">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+
+        <div id="cashout-box" class="w-[120px] h-[120px] p-3 shadow-md text-center flex flex-col justify-center rounded-lg border-purple-600 border-2 hover:bg-white cursor-pointer">
+          <p class="font-semibold">Cashout</p>
+          <div class="text-purple-500 text-2xl">
+            <i class="fa-solid fa-sack-dollar"></i>
+          </div>
+        </div>
+
+        <div class="w-[120px] h-[120px] p-3 shadow-md text-center flex flex-col justify-center rounded-lg border-purple-600 border-2 hover:bg-white cursor-pointer">
+          <p class="font-semibold">Add money</p>
+          <div class="text-purple-500 text-2xl">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+        <div class="w-[120px] h-[120px] p-3 shadow-md text-center flex flex-col justify-center rounded-lg border-purple-600 border-2 hover:bg-white cursor-pointer">
+          <p class="font-semibold">Add money</p>
+          <div class="text-purple-500 text-2xl">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+
+        <div class="w-[120px] h-[120px] p-3 shadow-md text-center flex flex-col justify-center rounded-lg border-purple-600 border-2 hover:bg-white cursor-pointer">
+          <p class="font-semibold">Add money</p>
+          <div class="text-purple-500 text-2xl">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+
+        <div class="w-[120px] h-[120px] p-3 shadow-md text-center flex flex-col justify-center rounded-lg border-purple-600 border-2 hover:bg-white cursor-pointer">
+          <p class="font-semibold">Add money</p>
+          <div class="text-purple-500 text-2xl">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </section>
+    <!-- Action Area -->
+    
+
+    <!-- Add money area -->
+     <section id="addmoney">
+      <h2 class="text-xl font-bold text-purple-600 bg-white p-5 rounded-xl m-4 text-center">Add Money</h2>
+      <div class="hero-content mx-auto">
+        
+              
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <form class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Account Number</span>
+              </label>
+              <input id="add-money-account-number" type="text" placeholder="Account Number" class="input input-bordered" required value="432332763254"/>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Select Bank</span>
+              </label>
+              <select class="select select-bordered w-full max-w-xs">
+                <option disabled selected>Choose one</option>
+                <option value="bkash">Bkash</option>
+                <option value="nagad">Nagod</option>
+                <option value="dbbl">DBBL</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Deposit Amount</span>
+              </label>
+              <input id="add-money-amount" type="text" placeholder="Enter your deposit amount" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Pin</span>
+              </label>
+              <input id="add-money-pin-number" type="text" placeholder="write your pin" class="input input-bordered" required value="1234" />
+              
+            </div>
+            <div class="form-control mt-6">
+              <button id="add-money" class="btn btn-primary">Add Money</button>
+            </div>
+          </form>
+        </div>
+      </div>
+     </section>
+    <!-- Add money area -->
+
+
+    <!-- Cashout area -->
+    <section id="cashout">
+      <h2 class="text-xl font-bold text-purple-600 bg-white p-5 rounded-xl m-4 text-center">Cashout</h2>
+      <div class="hero-content mx-auto">
+        
+              
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <form class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Account Number</span>
+              </label>
+              <input id="cashout-account-number" type="text" placeholder="Account Number" class="input input-bordered" required value="432332763254"/>
+            </div>
+            
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Cashout Amount</span>
+              </label>
+              <input id="cashout-amount" type="text" placeholder="Enter your cashout amount" class="input input-bordered" required />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Pin</span>
+              </label>
+              <input id="cashout-pin-number" type="text" placeholder="write your pin" class="input input-bordered" required value="1234" />
+              
+            </div>
+            <div class="form-control mt-6">
+              <button id="cashout-btn" class="btn btn-primary">Cashout</button>
+            </div>
+          </form>
+        </div>
+      </div>
+     </section>
+    <!-- Add money area -->
+
+
+
+
+  </div>
+  </main>
+
+  <script src="js/action.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+
+</html>

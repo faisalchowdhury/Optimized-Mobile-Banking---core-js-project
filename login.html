@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+
+
+      
+    
+
+
+    <main class="">
+        
+        <div class="bg-base-200 min-h-screen flex flex-col items-center justify-center">
+            <div>
+                <img class="w-[200px] m-auto" src="assets/logo.png" alt="">
+            </div>
+            <div class="hero-content mx-auto">
+              
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Account Number</span>
+                    </label>
+                    <input id="account-number" type="text" placeholder="Account Number" class="input input-bordered" required value="432332763254"/>
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input id="pin-number" type="text" placeholder="write your pin" class="input input-bordered" required value="1234" />
+                    
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="login-btn" class="btn btn-primary">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
